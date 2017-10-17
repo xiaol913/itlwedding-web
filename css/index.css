@@ -482,6 +482,65 @@ a {
   left: 100%;
   top: -100%;
 }
+.st-scroll .st-panel-2 .row {
+  margin: 0 25px;
+}
+.st-scroll .st-panel-2 .row div {
+  margin: 5px 0;
+}
+.st-scroll .st-panel-2 .row .the-1st-row,
+.st-scroll .st-panel-2 .row .the-2nd-row,
+.st-scroll .st-panel-2 .row .the-3rd-row {
+  -webkit-transform: translateX(300%);
+  -moz-transform: translateX(300%);
+  -ms-transform: translateX(300%);
+  -o-transform: translateX(300%);
+  transform: translateX(300%);
+  opacity: 0;
+}
+.st-scroll .st-panel-2 .row .part-desc {
+  max-height: 248px;
+  border: 2px solid #402d5c;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.st-scroll .st-panel-2 .row .part-desc h1 {
+  font-size: 22px;
+}
+.st-scroll .st-panel-2 .row .part-desc .btn-default {
+  margin-bottom: 10px;
+  border-radius: 0;
+  width: 100%;
+  background-color: #402d5c;
+  color: #fbfbfb;
+}
+.st-scroll .st-panel-2 .row .part-desc:hover ~ .part-img-small img {
+  -webkit-animation: show-img-left 1.5s forwards 0.5s;
+  -o-animation: show-img-left 1.5s forwards 0.5s;
+  animation: show-img-left 1.5s forwards 0.5s;
+}
+.st-scroll .st-panel-2 .row .part-desc:hover ~ .part-img-big img {
+  -webkit-animation: show-img-right 1.5s forwards 0.5s;
+  -o-animation: show-img-right 1.5s forwards 0.5s;
+  animation: show-img-right 1.5s forwards 0.5s;
+}
+.st-scroll .st-panel-2 .row .part-img-small {
+  overflow: hidden;
+}
+.st-scroll .st-panel-2 .row .part-img-small img {
+  opacity: 0;
+  max-height: 248px;
+  width: 100%;
+}
+.st-scroll .st-panel-2 .row .part-img-big {
+  overflow: hidden;
+}
+.st-scroll .st-panel-2 .row .part-img-big img {
+  opacity: 0;
+  max-height: 248px;
+  width: 100%;
+}
 .st-scroll .st-panel-3 {
   left: 200%;
   top: -200%;
@@ -536,6 +595,21 @@ a {
   -o-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
+}
+.scroll-2 .the-1st-row {
+  -webkit-animation: come-in 1.5s forwards 1s;
+  -o-animation: come-in 1.5s forwards 1s;
+  animation: come-in 1.5s forwards 1s;
+}
+.scroll-2 .the-2nd-row {
+  -webkit-animation: come-in 1.5s forwards 2s;
+  -o-animation: come-in 1.5s forwards 2s;
+  animation: come-in 1.5s forwards 2s;
+}
+.scroll-2 .the-3rd-row {
+  -webkit-animation: come-in 1.5s forwards 3s;
+  -o-animation: come-in 1.5s forwards 3s;
+  animation: come-in 1.5s forwards 3s;
 }
 .scroll-3 {
   -webkit-transform: translateX(-200%);
