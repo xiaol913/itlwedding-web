@@ -84,7 +84,6 @@ a {
   z-index: -1;
   -webkit-transition: width 0.2s ease-in;
   -moz-transition: width 0.2s ease-in;
-  -ms-transition: width 0.2s ease-in;
   -o-transition: width 0.2s ease-in;
   transition: width 0.2s ease-in;
 }
@@ -349,7 +348,6 @@ a {
 #page-content-wrapper .container .st-nav-bar .st-bar-4 > a {
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
   margin: 0 10px;
@@ -373,7 +371,6 @@ a {
   padding-top: 60px;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -382,7 +379,6 @@ a {
   transform: translate3d(0, 0, 0);
   -webkit-transition: transform 0.6s ease-in-out;
   -moz-transition: transform 0.6s ease-in-out;
-  -ms-transition: transform 0.6s ease-in-out;
   -o-transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
 }
@@ -469,6 +465,10 @@ a {
   max-width: 1280px;
   opacity: 1;
 }
+#page-content-wrapper .container .st-scroll .st-panel-1 .fade .carousel-inner {
+  border-radius: 10px;
+  border: 3px solid #8a6cb6;
+}
 #page-content-wrapper .container .st-scroll .st-panel-1 .fade .carousel-inner .item:first-child {
   top: auto;
   position: relative;
@@ -482,7 +482,6 @@ a {
   display: block !important;
   -webkit-transition: opacity ease-in-out 1s;
   -moz-transition: opacity ease-in-out 1s;
-  -ms-transition: opacity ease-in-out 1s;
   -o-transition: opacity ease-in-out 1s;
   transition: opacity ease-in-out 1s;
 }
@@ -507,7 +506,6 @@ a {
   opacity: 1;
   -webkit-transition: opacity ease-in-out 1s;
   -moz-transition: opacity ease-in-out 1s;
-  -ms-transition: opacity ease-in-out 1s;
   -o-transition: opacity ease-in-out 1s;
   transition: opacity ease-in-out 1s;
 }
@@ -536,7 +534,6 @@ a {
   opacity: 0;
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
-  -ms-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s;
 }
@@ -566,14 +563,12 @@ a {
   opacity: 0;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
 }
 #page-content-wrapper .container .st-scroll .st-panel-2 .next_page span {
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
   -webkit-transform: rotate(90deg);
@@ -604,7 +599,7 @@ a {
   margin: 5px 0;
 }
 #page-content-wrapper .container .st-scroll .st-panel-2 .part-desc {
-  border: 2px solid #402d5c;
+  border: 2px solid #8a6cb6;
   cursor: pointer;
   box-shadow: 0 -3px 3px;
   border-radius: 5px;
@@ -625,7 +620,6 @@ a {
   width: 100%;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
   background-color: #fff;
@@ -660,7 +654,6 @@ a {
   width: 100%;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
   -webkit-transform: translateX(150%);
@@ -678,7 +671,6 @@ a {
   width: 100%;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
   -webkit-transform: translateX(-150%);
@@ -709,7 +701,6 @@ a {
   opacity: 0;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
 }
@@ -721,7 +712,6 @@ a {
   transform: rotate(-90deg);
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
 }
@@ -738,7 +728,6 @@ a {
   border: none;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
-  -ms-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
   font-size: 14px;
@@ -765,7 +754,6 @@ a {
   margin: 5px 0;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
 }
@@ -795,7 +783,8 @@ a {
 #page-content-wrapper .container .st-scroll .st-panel-3 .place-desc {
   overflow: hidden;
   height: auto;
-  border: 1px solid rgba(64, 45, 92, 0.5);
+  border-radius: 10px;
+  border: 2px solid #8a6cb6;
   box-shadow: 0 3px 3px;
   cursor: pointer;
   border-radius: 5px;
@@ -810,7 +799,6 @@ a {
   width: 100%;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
-  -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
   background-color: #fff;
