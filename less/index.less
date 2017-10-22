@@ -100,8 +100,11 @@ a{
   & when (@name=weak){
     background-color: #dfdfdf;
   }
-  & when (@name=ppl){
-    background-color: #8a6cb6;
+  & when (@name=ddd){
+    background-color: #ddd;
+  }
+  & when (@name=hover){
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }
 //字体大小
@@ -282,7 +285,7 @@ a{
 .sidebar-nav {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 11px 0 0;
   position: absolute;
   top: 0;
   width: 220px;
@@ -290,6 +293,7 @@ a{
   //配合父块overflow:hidden 以及父块宽度小于子块的方式来隐藏滚动条但是依然可以滚动
   overflow-x: hidden;
   overflow-y: auto;
+  #bg-color(ddd);
   //logo
   .sidebar-brand{
     padding-top: 10px;
@@ -309,13 +313,13 @@ a{
     //导航按钮背景颜色（向左）
     &:before,
     &:after{
-      background-color: #1c1c1c;
+      #bg-color(ddd);
       content: '';
       height: 100%;
       position: absolute;
       top: 0;
       width: 0;
-      z-index: -1;
+      z-index: 1;
       -webkit-transition: width .2s ease-in;
       -moz-transition: width .2s ease-in;
       -o-transition: width .2s ease-in;
@@ -323,73 +327,18 @@ a{
     }
     &:before{
       left: 50%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
     }
     &:after{
       right: 50%;
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
     }
-    //不同导航按钮不同背景颜色
-    &:nth-child(2){
-      &:before {
-        background: linear-gradient(to right, #402d5c 0%, #fff 90%);
-      }
+    &:nth-child(1),
+    &:nth-child(10),
+    &:nth-child(11){
+      &:before,
       &:after{
-        background: linear-gradient(to left, #402d5c 0%, #fff 90%);
-      }
-    }
-    &:nth-child(3){
-      &:before {
-        background: linear-gradient(to right, #4c366d 0%, #fff 90%);
-      }
-      &:after{
-        background: linear-gradient(to left, #4c366d 0%, #fff 90%);
-      }
-    }
-    &:nth-child(4){
-      &:before {
-        background: linear-gradient(to right, #583e7e 0%, #fff 90%);
-      }
-      &:after{
-        background: linear-gradient(to left, #583e7e 0%, #fff 90%);
-      }
-    }
-    &:nth-child(5){
-      &:before {
-        background: linear-gradient(to right, #64468f 0%, #fff 90%);
-      }
-      &:after{
-        background: linear-gradient(to left, #64468f 0%, #fff 90%);
-      }
-    }
-    &:nth-child(6){
-      &:before {
-        background: linear-gradient(to right, #704fa0 0%, #fff 90%);
-      }
-      &:after{
-        background: linear-gradient(to left, #704fa0 0%, #fff 90%);
-      }
-    }
-    &:nth-child(7){
-      &:before {
-        background: linear-gradient(to right, #7c5aae 0%, #fff 90%);
-      }
-      &:after{
-        background: linear-gradient(to left, #7c5aae 0%, #fff 90%);
-      }
-    }
-    &:nth-child(8){
-      &:before {
-        background: linear-gradient(to right, #8a6cb6 0%, #fff 90%);
-      }
-      &:after{
-        background: linear-gradient(to left, #8a6cb6 0%, #fff 90%);
-      }
-    }
-    &:nth-child(9){
-      &:before {
-        background: linear-gradient(to right, #987dbf 0%, #fff 90%);
-      }
-      &:after{
-        background: linear-gradient(to left, #987dbf 0%, #fff 90%);
+        background: transparent;
       }
     }
     //before悬浮动画
@@ -410,7 +359,8 @@ a{
       background-color: transparent;
     }
     a {
-      #ft-color(dark);
+      #ft-color(black);
+      z-index: 2;
       display: block;
       padding: 10px 15px;
       text-decoration: none;
@@ -432,10 +382,6 @@ a{
   li:nth-child(10){
     padding: 0 15px;
     margin: 15px 0;
-    &:before,
-    &:after{
-      background-color: transparent;
-    }
     a:hover,
     &.open a:hover{
       #ft-color(ppl);
@@ -444,10 +390,6 @@ a{
   //二维码区
   li:nth-child(11){
     padding: 0 30px;
-    &:before,
-    &:after{
-      background-color: transparent;
-    }
     a{
       width: 47px;
       height: 47px;
@@ -505,7 +447,7 @@ a{
     opacity: 0;
     text-align: center;
     width: 100px;
-    #ft-color(ppl);
+    #ft-color(ddd);
   }
   &:hover{
     &:before {
@@ -525,18 +467,18 @@ a{
   }
   .hamb-top {
     -webkit-transition: all 0.35s ease-in-out;
-    background-color: rgba(64, 45, 92, 0.7);
     top: 5px;
+    #bg-color(ddd);
   }
   .hamb-middle {
-    background-color: rgba(64, 45, 92, 0.7);
     margin-top: -2px;
     top: 50%;
+    #bg-color(ddd);
   }
   .hamb-bottom {
     -webkit-transition: all 0.35s ease-in-out;
-    background-color: rgba(64, 45, 92, 0.7);
     bottom: 5px;
+    #bg-color(ddd);
   }
 }
 .hamburger.is-closed .hamb-top,
@@ -556,16 +498,16 @@ a{
     -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
     margin-top: -2px;
     top: 50%;
-    #bg-color(ppl);
+    #bg-color(ddd);
   }
   .hamb-middle {
-    #bg-color(ppl);
+    #bg-color(ddd);
     display: none;
   }
   .hamb-bottom {
     -webkit-transform: rotate(-45deg);
     -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
-    #bg-color(ppl);
+    #bg-color(ddd);
     margin-top: -2px;
     top: 50%;
   }
@@ -617,12 +559,12 @@ a{
         #ft-color(dark);
         &:hover{
           #ft-color(white);
-          #bg-color(ppl);
+          background-color: rgba(0, 0, 0, 0.8);
         }
       }
       .active>a{
         #ft-color(white);
-        background-color: rgba(138, 108, 182, 0.6);
+        background-color: #ddd;
       }
     }
     //内容区内容部分
@@ -782,7 +724,6 @@ a{
         //background: -o-linear-gradient(left bottom, rgba(64, 45, 92, 0.5) 0%, #fff 50%, #fff 50%, rgba(64, 45, 92, 0.5) 100%);
         //background: linear-gradient(to right top, rgba(64, 45, 92, 0.5) 0%, #fff 50%, #fff 50%, rgba(64, 45, 92, 0.5) 100%);
         .next_page {
-          margin-bottom: 20px;
           max-width: 1280px;
           width: 100%;
           position: absolute;
@@ -822,10 +763,14 @@ a{
           opacity: 0;
           margin: 5px 0;
         }
+        .the-1st-row{
+          margin-top: 45px;
+        }
         .part-desc {
-          border: 2px solid #8a6cb6;
+          border: 1px solid #ddd;
+          //border: 2px solid #8a6cb6;
           cursor: pointer;
-          box-shadow: 0 -3px 3px;
+          //box-shadow: 0 -3px 3px;
           #radius(5px);
           #bg-color(white);
           h1 {
