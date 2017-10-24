@@ -593,17 +593,14 @@ a{
         overflow:hidden;
         height: 100%;
         text-align: center;
-        &:before{
-          content: '';
-          display: inline-block;
-          height: 100%;
-          vertical-align: middle;
-        }
         .row{
           display: inline-block;
           vertical-align: middle;
           width: 100%;
           max-width: 1280px;
+          top: 50%;
+          position: relative;
+          transform: translateY(-50%);
           .video-main{
             width: 100%;
             display: flex;
@@ -639,6 +636,9 @@ a{
         vertical-align: middle;
         max-width: 1280px;
         opacity: 1;
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
         //banner区通用样式
         .carousel-inner{
           border-radius: 10px;
@@ -724,7 +724,6 @@ a{
         //background: -o-linear-gradient(left bottom, rgba(64, 45, 92, 0.5) 0%, #fff 50%, #fff 50%, rgba(64, 45, 92, 0.5) 100%);
         //background: linear-gradient(to right top, rgba(64, 45, 92, 0.5) 0%, #fff 50%, #fff 50%, rgba(64, 45, 92, 0.5) 100%);
         .next_page {
-          max-width: 1280px;
           width: 100%;
           position: absolute;
           top: 0;
@@ -842,7 +841,6 @@ a{
         //background: linear-gradient(to right bottom, rgba(64, 45, 92, 0.5) 0%, #fff 50%, #fff 50%, rgba(64, 45, 92, 0.5) 100%);
         .above_page{
           margin-bottom: 20px;
-          max-width: 1280px;
           width: 100%;
           position: absolute;
           top: 0;

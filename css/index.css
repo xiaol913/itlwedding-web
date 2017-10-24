@@ -346,15 +346,6 @@ a {
   height: 100%;
   text-align: center;
 }
-#page-content-wrapper .container .st-scroll .st-panel-1:before,
-#page-content-wrapper .container .st-scroll .st-panel-2:before,
-#page-content-wrapper .container .st-scroll .st-panel-3:before,
-#page-content-wrapper .container .st-scroll .st-panel-4:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
 #page-content-wrapper .container .st-scroll .st-panel-1 .row,
 #page-content-wrapper .container .st-scroll .st-panel-2 .row,
 #page-content-wrapper .container .st-scroll .st-panel-3 .row,
@@ -363,6 +354,9 @@ a {
   vertical-align: middle;
   width: 100%;
   max-width: 1280px;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
 }
 #page-content-wrapper .container .st-scroll .st-panel-1 .row .video-main,
 #page-content-wrapper .container .st-scroll .st-panel-2 .row .video-main,
@@ -419,6 +413,9 @@ a {
   vertical-align: middle;
   max-width: 1280px;
   opacity: 1;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
 }
 #page-content-wrapper .container .st-scroll .st-panel-1 .fade .carousel-inner {
   border-radius: 10px;
@@ -501,7 +498,6 @@ a {
   top: -100%;
 }
 #page-content-wrapper .container .st-scroll .st-panel-2 .next_page {
-  max-width: 1280px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -640,7 +636,6 @@ a {
 }
 #page-content-wrapper .container .st-scroll .st-panel-3 .above_page {
   margin-bottom: 20px;
-  max-width: 1280px;
   width: 100%;
   position: absolute;
   top: 0;
