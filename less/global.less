@@ -1,0 +1,224 @@
+//全局函数
+@wrapper-width:220px;
+@btn-bar-width:52px;
+@banner-height:561px;
+@st-panel-height:800px;
+//动画函数
+//X旋转
+#transform-rotateX(@deg){
+  -webkit-transform+_: rotateX(@deg);
+  -moz-transform+_: rotateX(@deg);
+  -ms-transform+_: rotateX(@deg);
+  -o-transform+_: rotateX(@deg);
+  transform+_: rotateX(@deg);
+}
+//Y旋转
+#transform-rotateY(@deg){
+  -webkit-transform+_: rotateY(@deg);
+  -moz-transform+_: rotateY(@deg);
+  -ms-transform+_: rotateY(@deg);
+  -o-transform+_: rotateY(@deg);
+  transform+_: rotateY(@deg);
+}
+//X+Y旋转
+#transform-rotate(@deg){
+  -webkit-transform+_: rotate(@deg);
+  -moz-transform+_: rotate(@deg);
+  -ms-transform+_: rotate(@deg);
+  -o-transform+_: rotate(@deg);
+  transform+_: rotate(@deg);
+}
+//X轴偏移
+#transform-translateX(@X){
+  -webkit-transform+_: translateX(@X);
+  -moz-transform+_: translateX(@X);
+  -ms-transform+_: translateX(@X);
+  -o-transform+_: translateX(@X);
+  transform+_: translateX(@X);
+}
+//Y轴偏移
+#transform-translateY(@Y){
+  -webkit-transform+_: translateY(@Y);
+  -moz-transform+_: translateY(@Y);
+  -ms-transform+_: translateY(@Y);
+  -o-transform+_: translateY(@Y);
+  transform+_: translateY(@Y);
+}
+//X和Y轴偏移
+#transform-translateX-Y(@X,@Y){
+  -webkit-transform+_: translate(@X, @Y);
+  -moz-transform+_: translate(@X, @Y);
+  -ms-transform+_: translate(@X, @Y);
+  -o-transform+_: translate(@X, @Y);
+  transform+_: translate(@X, @Y);
+}
+//scale缩放
+#transform-scaleX-Y(@X,@Y){
+  -webkit-transform+_: scale(@X, @Y);
+  -moz-transform+_: scale(@X, @Y);
+  -ms-transform+_: scale(@X, @Y);
+  -o-transform+_: scale(@X, @Y);
+  transform+_: scale(@X, @Y);
+}
+//场地图片鼠标悬停转向动画
+#place-img-animation(){
+  z-index: 99;
+  -webkit-transform: rotate(360deg) scale(1.5, 1.5);
+  -moz-transform: rotate(360deg) scale(1.5, 1.5);
+  -ms-transform: rotate(360deg) scale(1.5, 1.5);
+  -o-transform: rotate(360deg) scale(1.5, 1.5);
+  transform: rotate(360deg) scale(1.5, 1.5);
+  .img-thumbnail{
+    border-radius: 20px;
+  }
+}
+//背景颜色
+#bg-color(@name){
+  & when (@name=black){
+    background-color: #000;
+  }
+  & when (@name=white){
+    background-color: #fff;
+  }
+  & when (@name=dark){
+    background-color: #404040;
+  }
+  & when (@name=deep_blue){
+    background-color: #1d2939;
+  }
+  & when (@name=weak){
+    background-color: #dfdfdf;
+  }
+  & when (@name=ddd){
+    background-color: #ddd;
+  }
+  & when (@name=hover){
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+//字体大小
+#ft-size(@name){
+  & when (@name=small){
+    font-size: 12px;
+  }
+  & when (@name=medium){
+    font-size: 14px;
+  }
+  & when (@name=large){
+    font-size: 16px;
+  }
+  & when (@name=title){
+    font-size: 32px;
+  }
+  & when (@name=big){
+    font-size: 22px;
+  }
+  & when (@name=h){
+    font-size: 50px;
+  }
+}
+//字体颜色
+#ft-color(@name){
+  & when (@name=dark){
+    color: #87807c;
+  }
+  & when (@name=black){
+    color: #141914;
+  }
+  & when (@name=white){
+    color: #fbfbfb;
+  }
+  & when (@name=weak){
+    color: #555555;
+  }
+  & when (@name=active){
+    color: #00ced1;
+  }
+  & when (@name=ppl){
+    color: #8a6cb6;
+  }
+}
+//圆角（默认50%）
+#radius(@radius:50%){
+  border-radius: @radius;
+}
+//水平居中
+#center-h(@width){
+  left:50%;
+  margin-left: @width*-.5;
+}
+//背景图
+#bg-img(@src){
+  background-image: url("../imgs/@{src}");
+}
+//正方形
+#square(@w:10px){
+  width: @w;
+  height:@w;
+}
+//行高
+#line-height(@h){
+  height:@h;
+  line-height: @h;
+}
+//左浮动
+.fl(){
+  float: left;
+}
+//右浮动
+.fr(){
+  float: right;
+}
+//清除浮动
+.clearfix(){
+  &:after{
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+    zoom: 1;
+  }
+}
+//背景图cover
+.cover-background(){
+  background-size: cover;
+  background+_: no-repeat center;
+}
+
+
+//场景动画
+#banner-anim(@name){
+  & when (@name=banner_1){
+    -webkit-animation: banner_1 1.5s ease-in forwards;
+    -o-animation: banner_1 1.5s ease-in forwards;
+    animation: banner_1 1.5s ease-in forwards;
+  }
+  & when (@name=banner_2){
+    -webkit-animation: banner_2 1.5s ease-in forwards;
+    -o-animation: banner_2 1.5s ease-in forwards;
+    animation: banner_2 1.5s ease-in forwards;
+  }
+  & when (@name=banner_3){
+    -webkit-animation: banner_3 1.5s ease-in forwards;
+    -o-animation: banner_3 1.5s ease-in forwards;
+    animation: banner_3 1.5s ease-in forwards;
+  }
+  & when (@name=banner_p){
+    -webkit-animation: banner_p 1.5s forwards 1s;
+    -o-animation: banner_p 1.5s forwards 1s;
+    animation: banner_p 1.5s forwards 1s;
+  }
+}
+#wedding-anim(@name){
+  & when (@name=wedding_header){
+    -webkit-animation: wedding_header 1.5s ease-in forwards;
+    -o-animation: wedding_header 1.5s ease-in forwards;
+    animation: wedding_header 1.5s ease-in forwards;
+  }
+  & when (@name=wedding_img){
+    -webkit-animation: wedding_img 1.5s ease-in;
+    -o-animation: wedding_img 1.5s ease-in;
+    animation: wedding_img 1.5s ease-in;
+  }
+}

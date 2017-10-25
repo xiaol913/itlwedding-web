@@ -1,0 +1,314 @@
+@import "global";
+
+//全局样式
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  height:100%;
+}
+body{
+  overflow-x: hidden;
+  height:100%;
+}
+a{
+  text-decoration: none;
+}
+/* wrapper区域 */
+#wrapper{
+  height: 100%;
+  padding-left: 0;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  #sidebar-wrapper {
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    height: 100%;
+    left: 220px;
+    margin-left: -220px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+    width: 0;
+    z-index: 1000;
+    #bg-color(white);
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+#wrapper.toggled {
+  padding-left: @wrapper-width;
+  #sidebar-wrapper {
+    width: @wrapper-width - 16px;
+    border-bottom: none;
+    overflow: hidden;
+  }
+}
+/* 左侧导航栏 */
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0 11px 0 0;
+  position: absolute;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  //配合父块overflow:hidden 以及父块宽度小于子块的方式来隐藏滚动条但是依然可以滚动
+  overflow-x: hidden;
+  overflow-y: auto;
+  #bg-color(ddd);
+  //logo
+  .sidebar-brand{
+    padding-top: 10px;
+    a{
+      height: 120px;
+      background:center no-repeat;
+      background-size: contain;
+      #bg-img("logo-top.png");
+    }
+  }
+  //内容部分
+  li {
+    display: inline-block;
+    line-height: 20px;
+    position: relative;
+    width: 100%;
+    //导航按钮背景颜色（向左）
+    &:before,
+    &:after{
+      #bg-color(ddd);
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 0;
+      z-index: 1;
+      -webkit-transition: width .2s ease-in;
+      -moz-transition: width .2s ease-in;
+      -o-transition: width .2s ease-in;
+      transition: width .2s ease-in;
+    }
+    &:before{
+      left: 50%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
+    }
+    &:after{
+      right: 50%;
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
+    }
+    &:nth-child(1),
+    &:nth-child(10),
+    &:nth-child(11){
+      &:before,
+      &:after{
+        background: transparent;
+      }
+    }
+    //before悬浮动画
+    &:hover:before {
+      -webkit-transition: width 0.2s ease-in;
+      transition: width 0.2s ease-in;
+      width: 50%;
+    }
+    //after悬浮动画
+    &:hover:after{
+      -webkit-transition: width 0.2s ease-in;
+      transition: width 0.2s ease-in;
+      width: 50%;
+    }
+    //logo区背景颜色为透明
+    &:first-child:before,
+    &:first-child:after{
+      background-color: transparent;
+    }
+    a {
+      #ft-color(black);
+      z-index: 2;
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+  li a:active,
+  li a:focus{
+    background-color: transparent;
+    #ft-color(ppl);
+    text-decoration: none;
+  }
+  li a:hover{
+    background-color: transparent;
+    #ft-color(white);
+    text-decoration: none;
+  }
+  //联系方式
+  li:nth-child(10){
+    padding: 0 15px;
+    margin: 15px 0;
+    a:hover,
+    &.open a:hover{
+      #ft-color(ppl);
+    }
+  }
+  //二维码区
+  li:nth-child(11){
+    padding: 0 30px;
+    a{
+      width: 47px;
+      height: 47px;
+      display: inline-block;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      #bg-img("pc_3.png");
+      &:nth-child(1){
+        background-position: -8px -64px;
+      }
+      &:nth-child(2){
+        background-position: -121px -64px;
+      }
+      &:nth-child(3){
+        background-position: -176px -64px;
+      }
+    }
+    a:hover,
+    &.open a:hover{
+      #ft-color(black);
+    }
+  }
+}
+/* 左侧导航栏开关 */
+.btn-bar{
+  width: @btn-bar-width;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  //border-right: 3px solid #402d5c;
+  position: absolute;
+}
+.hamburger {
+  background: transparent;
+  border: none;
+  display: block;
+  height: 32px;
+  margin: 10px;
+  position: fixed;
+  top: 5px;
+  width: 32px;
+  z-index: 999;
+  &:hover,&:focus,&:active{
+    outline: none;
+  }
+}
+.hamburger.is-closed{
+  &:before {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.35s ease-in-out;
+    content: '';
+    display: block;
+    font-size: 14px;
+    line-height: 32px;
+    opacity: 0;
+    text-align: center;
+    width: 100px;
+    #ft-color(ddd);
+  }
+  &:hover{
+    &:before {
+      -webkit-transform: translate3d(-100px, 0, 0);
+      -webkit-transition: all 0.35s ease-in-out;
+      display: block;
+      opacity: 1;
+    }
+    .hamb-top {
+      -webkit-transition: all 0.35s ease-in-out;
+      top: 0;
+    }
+    .hamb-bottom {
+      -webkit-transition: all 0.35s ease-in-out;
+      bottom: 0;
+    }
+  }
+  .hamb-top {
+    -webkit-transition: all 0.35s ease-in-out;
+    top: 5px;
+    #bg-color(ddd);
+  }
+  .hamb-middle {
+    margin-top: -2px;
+    top: 50%;
+    #bg-color(ddd);
+  }
+  .hamb-bottom {
+    -webkit-transition: all 0.35s ease-in-out;
+    bottom: 5px;
+    #bg-color(ddd);
+  }
+}
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.hamburger.is-open {
+  .hamb-top {
+    -webkit-transform: rotate(45deg);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+    margin-top: -2px;
+    top: 50%;
+    #bg-color(ddd);
+  }
+  .hamb-middle {
+    #bg-color(ddd);
+    display: none;
+  }
+  .hamb-bottom {
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+    #bg-color(ddd);
+    margin-top: -2px;
+    top: 50%;
+  }
+  &:before {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.35s ease-in-out;
+    content: '';
+    display: block;
+    font-size: 14px;
+    line-height: 32px;
+    opacity: 0;
+    text-align: center;
+    width: 100px;
+    #ft-color(black);
+  }
+  &:hover:before {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    -webkit-transition: all 0.35s ease-in-out;
+    display: block;
+    opacity: 1;
+  }
+}
+/* page区域 */
+#page-content-wrapper {
+  height:100%;
+  margin: 0 @btn-bar-width;
+  //内容区内容部分
+  .container{
+    margin: 0;
+    padding: 0;
+    height:100%;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+  }
+}

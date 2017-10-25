@@ -1,0 +1,399 @@
+@keyframes banner_1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(90deg) translateX(-200px);
+    -moz-transform: rotateX(90deg) translateX(-200px);
+    -ms-transform: rotateX(90deg) translateX(-200px);
+    -o-transform: rotateX(90deg) translateX(-200px);
+    transform: rotateX(90deg) translateX(-200px);
+  }
+  70% {
+    -webkit-transform: rotateX(0deg) translateX(20px);
+    -moz-transform: rotateX(0deg) translateX(20px);
+    -ms-transform: rotateX(0deg) translateX(20px);
+    -o-transform: rotateX(0deg) translateX(20px);
+    transform: rotateX(0deg) translateX(20px);
+  }
+  80% {
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  90% {
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes banner_2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg) translateX(200px);
+    -moz-transform: rotateY(90deg) translateX(200px);
+    -ms-transform: rotateY(90deg) translateX(200px);
+    -o-transform: rotateY(90deg) translateX(200px);
+    transform: rotateY(90deg) translateX(200px);
+  }
+  70% {
+    -webkit-transform: rotateY(0deg) translateX(-20px);
+    -moz-transform: rotateY(0deg) translateX(-20px);
+    -ms-transform: rotateY(0deg) translateX(-20px);
+    -o-transform: rotateY(0deg) translateX(-20px);
+    transform: rotateY(0deg) translateX(-20px);
+  }
+  80% {
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  90% {
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes banner_3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+  70% {
+    -webkit-transform: rotateX(-30deg);
+    -moz-transform: rotateX(-30deg);
+    -ms-transform: rotateX(-30deg);
+    -o-transform: rotateX(-30deg);
+    transform: rotateX(-30deg);
+  }
+  80% {
+    -webkit-transform: rotateX(30deg);
+    -moz-transform: rotateX(30deg);
+    -ms-transform: rotateX(30deg);
+    -o-transform: rotateX(30deg);
+    transform: rotateX(30deg);
+  }
+  90% {
+    -webkit-transform: rotateX(-30deg);
+    -moz-transform: rotateX(-30deg);
+    -ms-transform: rotateX(-30deg);
+    -o-transform: rotateX(-30deg);
+    transform: rotateX(-30deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+@keyframes banner_p {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(500px);
+    -moz-transform: translateX(500px);
+    -ms-transform: translateX(500px);
+    -o-transform: translateX(500px);
+    transform: translateX(500px);
+  }
+  70% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  80% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  90% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@keyframes wedding_header {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes wedding_img {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .6;
+  }
+}
+.st-nav-bar {
+  padding: 10px 0;
+  height: 50px;
+  position: absolute;
+}
+.st-nav-bar .st-bar > a {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  margin: 0 10px;
+  border: none;
+  z-index: 99;
+  color: #87807c;
+}
+.st-nav-bar .st-bar > a:hover {
+  color: #fbfbfb;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.st-nav-bar .st-bar.active > a {
+  color: #fbfbfb;
+  background-color: #ddd;
+}
+.st-nav-bar .st-bar.active > a:hover {
+  color: #fbfbfb;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.fade {
+  padding-top: 60px;
+  margin: 0 auto;
+  vertical-align: middle;
+  max-width: 1280px;
+  opacity: 1;
+  top: 50%;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.fade .carousel-inner {
+  border-radius: 10px;
+  border: 3px solid #8a6cb6;
+}
+.fade .carousel-inner .item:first-child {
+  top: auto;
+  position: relative;
+}
+.fade .carousel-inner .item {
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0 !important;
+  display: block !important;
+  -webkit-transition: opacity ease-in-out 1s;
+  -moz-transition: opacity ease-in-out 1s;
+  -o-transition: opacity ease-in-out 1s;
+  transition: opacity ease-in-out 1s;
+}
+.fade .carousel-inner .item .carousel-caption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0;
+  background-image: url("../imgs/gridtile.png");
+}
+.fade .carousel-inner .item .carousel-caption .banner_label {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.fade .carousel-inner .item .carousel-caption .banner_label h1 {
+  opacity: 0;
+  font-size: 50px;
+}
+.fade .carousel-inner .item .carousel-caption .banner_label p {
+  opacity: 0;
+}
+.fade .carousel-inner .item img {
+  height: 100%;
+  width: 100%;
+}
+.fade .carousel-inner .item.active {
+  opacity: 1;
+  -webkit-transition: opacity ease-in-out 1s;
+  -moz-transition: opacity ease-in-out 1s;
+  -o-transition: opacity ease-in-out 1s;
+  transition: opacity ease-in-out 1s;
+}
+.fade .carousel-inner .item.active p {
+  -webkit-animation: banner_p 1.5s forwards 1s;
+  -o-animation: banner_p 1.5s forwards 1s;
+  animation: banner_p 1.5s forwards 1s;
+}
+.fade .carousel-inner .item.active #banner_1 h1 {
+  -webkit-animation: banner_1 1.5s ease-in forwards;
+  -o-animation: banner_1 1.5s ease-in forwards;
+  animation: banner_1 1.5s ease-in forwards;
+}
+.fade .carousel-inner .item.active #banner_2 h1 {
+  -webkit-animation: banner_2 1.5s ease-in forwards;
+  -o-animation: banner_2 1.5s ease-in forwards;
+  animation: banner_2 1.5s ease-in forwards;
+}
+.fade .carousel-inner .item.active #banner_3 h1 {
+  -webkit-animation: banner_3 1.5s ease-in forwards;
+  -o-animation: banner_3 1.5s ease-in forwards;
+  animation: banner_3 1.5s ease-in forwards;
+}
+.fade .left,
+.fade .right {
+  opacity: 0;
+  margin-top: 60px;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.fade .left:hover,
+.fade .right:hover {
+  opacity: 1;
+}
+.scroll-header {
+  padding-top: 60px;
+  text-align: center;
+  -webkit-animation: wedding_header 1.5s ease-in forwards;
+  -o-animation: wedding_header 1.5s ease-in forwards;
+  animation: wedding_header 1.5s ease-in forwards;
+}
+.scroll-content {
+  height: 80%;
+  padding-top: 10px;
+  left: 0;
+  position: relative;
+}
+.scroll-content .item-group {
+  position: relative;
+  height: 100%;
+  white-space: nowrap;
+}
+.scroll-content .item-group .content-item {
+  opacity: 0.6;
+  width: 400px;
+  height: 100%;
+  display: inline-block;
+  background-image: url("../imgs/banner_1.jpg");
+  background-size: cover;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-animation: wedding_img 1.5s ease-in;
+  -o-animation: wedding_img 1.5s ease-in;
+  animation: wedding_img 1.5s ease-in;
+}
+.scroll-content .item-group .content-item:hover {
+  opacity: 1;
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+.scroll-content .item-group .content-item:hover .item-box {
+  opacity: 1;
+}
+.scroll-content .item-group .content-item .item-box {
+  opacity: 0;
+  text-align: center;
+  width: 400px;
+  height: 40%;
+  position: absolute;
+  white-space: normal;
+  background-color: rgba(221, 221, 221, 0.7);
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.scroll-content .item-group .content-item .item-box .words {
+  top: 50%;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.scroll-content .item-group .content-item .item-box .words .btn-default {
+  border: none;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.scroll-content .item-group .content-item .item-box .words .btn-default:hover {
+  background-color: #000;
+  color: #fbfbfb;
+}
+.scroll-bar {
+  width: 100%;
+  height: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ddd;
+}
+.scroll-bar .scroll-slider {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  height: 11px;
+  width: 30px;
+  background-color: #404040;
+}
