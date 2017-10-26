@@ -23,7 +23,8 @@
       background-color: rgba(0, 0, 0, 0.8);
     }
   }
-  .st-bar.active>a{
+  .st-bar.active>a,
+  .st-bar.active>a:focus{
     #ft-color(white);
     background-color: #ddd;
     &:hover{
@@ -135,6 +136,7 @@
 .scroll-header{
   padding-top: 60px;
   text-align: center;
+  opacity: 0;
   #wedding-anim(wedding_header);
 }
 //内容块
@@ -215,5 +217,162 @@
     height: 11px;
     width: 30px;
     #bg-color(dark);
+  }
+}
+
+//海外婚礼详情页内容区
+.st-content{
+  position: relative;
+  height: 100%;
+}
+.wed-item{
+  opacity: 0;
+  position: absolute;
+  padding-top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  .item-content{
+    position: absolute;
+    left: 33.33333334%;
+    width: 33.33333333%;
+    padding: 0 10px;
+    text-align: center;
+    top: 50%;
+    #transform-translateY(-50%);
+    h1{
+      opacity:0;
+      #transform-scaleX-Y(0,0);
+    }
+    label,p{
+      opacity:0;
+    }
+  }
+  .item-img{
+    width: 33.33333333%;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    &:nth-child(2){
+      .fl();
+      height: 59%;
+      padding-bottom: 5px;
+      img{
+        #transform-translateX(100%);
+      }
+    }
+    &:nth-child(3){
+      height: 40%;
+      .fr();
+      padding-bottom: 5px;
+      img{
+        #transform-translateX(-100%);
+      }
+    }
+    &:nth-child(4){
+      height: 40%;
+      overflow: inherit;
+      img{
+        #transform-translateX(-100%);
+      }
+    }
+    &:nth-child(5){
+      height: 59%;
+      .fr();
+      img{
+        #transform-translateX(100%);
+      }
+    }
+  }
+}
+//海外婚礼详情页进场动画
+.wed-item.active{
+  opacity: 1;
+  .item-content{
+    h1{
+      #wedding-anim(load_word_small_big);
+    }
+    label,p{
+      #wedding-anim(wedding_header);
+    }
+  }
+  .item-img.left-right{
+    img{
+      #wedding-anim(load_left_right);
+    }
+  }
+  .item-img.right-left{
+    img{
+      #wedding-anim(load_right_left);
+    }
+  }
+  .item-img.up-down{
+    img{
+      #wedding-anim(load_up_down);
+    }
+  }
+  .item-img.down-up{
+    img{
+      #wedding-anim(load_down_up);
+    }
+  }
+}
+
+//视频详情页
+.video-header{
+  opacity: 0;
+  text-align: center;
+  padding-top: 60px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  #wedding-anim(wedding_header);
+}
+.video-frame{
+  opacity: 0;
+  height: 50%;
+  text-align: center;
+  #wedding-anim(wedding_header);
+  iframe{
+    border: none;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+  }
+}
+.video-desc{
+  opacity: 0;
+  text-align: center;
+  margin-top: 20px;
+  #wedding-anim(wedding_header);
+  .btn-default{
+    border: none;
+    #bg-color(ddd);
+  }
+  a:hover{
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    #ft-color(white);
+    #bg-color(black);
+  }
+}
+
+//环球旅拍详情页
+.item-box.photo-box{
+  height: 100% !important;
+  background: transparent !important;
+  a{
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 }

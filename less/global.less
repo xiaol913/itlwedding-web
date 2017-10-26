@@ -212,13 +212,38 @@
 }
 #wedding-anim(@name){
   & when (@name=wedding_header){
-    -webkit-animation: wedding_header 1.5s ease-in forwards;
-    -o-animation: wedding_header 1.5s ease-in forwards;
-    animation: wedding_header 1.5s ease-in forwards;
+    -webkit-animation: wedding_header 1.5s ease-in forwards .5s;
+    -o-animation: wedding_header 1.5s ease-in forwards .5s;
+    animation: wedding_header 1.5s ease-in forwards .5s;
   }
   & when (@name=wedding_img){
     -webkit-animation: wedding_img 1.5s ease-in;
     -o-animation: wedding_img 1.5s ease-in;
     animation: wedding_img 1.5s ease-in;
+  }
+  & when (@name=load_right_left){
+    -webkit-animation: load_right_left 2s ease-in-out forwards;
+    -o-animation: load_right_left 2s ease-in-out forwards;
+    animation: load_right_left 2s ease-in-out forwards;
+  }
+  & when (@name=load_left_right){
+    -webkit-animation: load_left_right 2s ease-in-out forwards;
+    -o-animation: load_left_right 2s ease-in-out forwards;
+    animation: load_left_right 2s ease-in-out forwards;
+  }
+  & when (@name=load_up_down){
+    -webkit-animation: load_up_down 2s ease-in-out forwards;
+    -o-animation: load_up_down 2s ease-in-out forwards;
+    animation: load_up_down 2s ease-in-out forwards;
+  }
+  & when (@name=load_down_up){
+    -webkit-animation: load_down_up 2s ease-in-out forwards;
+    -o-animation: load_down_up 2s ease-in-out forwards;
+    animation: load_down_up 2s ease-in-out forwards;
+  }
+  & when (@name=load_word_small_big){
+    -webkit-animation: load_word_small_big 1.5s ease-in-out forwards .5s;
+    -o-animation: load_word_small_big 1.5s ease-in-out forwards .5s;
+    animation: load_word_small_big 1.5s ease-in-out forwards .5s;
   }
 }
