@@ -1,0 +1,147 @@
+@import "global";
+
+//width < 768px
+@media screen and (max-width: 768px){
+  //整体页面
+  #page-content-wrapper{
+    margin: 0 10px;
+  }
+  //移动端侧边栏
+  .sidebar-nav{
+    .sidebar-brand{
+      display: none;
+    }
+  }
+  //移动端顶部菜单栏
+  .navbar-header{
+    height: 60px;
+    .navbar-toggle{
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      .navbar-brand{
+        background-image: url("../imgs/logo-right.png");
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center;
+      }
+    }
+  }
+  //移动端下拉菜单栏
+  .container>.navbar-collapse{
+    margin: 0;
+  }
+  .nav-menu{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 201px;
+    overflow: hidden;
+    z-index: 99;
+    #bg-color(white);
+  }
+  //移动端banner区
+  .fade{
+    padding: 0;
+    top: 40%;
+    .carousel-inner{
+      overflow: inherit;
+      .item{
+        .carousel-caption{
+          .banner_label{
+            height:100%;
+            h1{
+              width: 100%;
+              top: -110px;
+              #ft-size(title);
+              #ft-color(ddd);
+              position: absolute;
+              text-shadow: 1px 1px;
+            }
+            p{
+              margin: 0;
+              width: 100%;
+              #ft-color(ddd);
+              top: 180px;
+              position: relative;
+              text-align: center;
+              text-shadow: 1px 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+  //移动端横向移动图片区
+  .scroll-header{
+    padding-top: 0;
+    label{
+      #ft-size(small);
+      #ft-color(ddd)
+    }
+    h1{
+      #ft-size(title);
+      #ft-color(dark);
+    }
+    h4{
+      #ft-size(medium);
+    }
+  }
+  .scroll-content{
+    .item-group{
+      .content-item{
+        width: 200px;
+        h3{
+          #ft-size(large);
+        }
+        p{
+          #ft-size(small);
+        }
+      }
+    }
+  }
+  //移动端婚礼详情页
+  .wed-item{
+    padding-top: 0;
+    .item-content{
+      height: 100%;
+      //display: flex;
+      //flex-direction: column;
+      //justify-content: center;
+      h1{
+        #ft-size(medium);
+      }
+      label{
+        #ft-size(small)
+      }
+      p{
+        font-size: 10px;
+      }
+    }
+    .item-img{
+      img{
+        height: 50%;
+        position: relative;
+        top: 20%;
+      }
+      &:nth-child(2){
+        height: 49%;
+      }
+      &:nth-child(3){
+        height: 49%;
+      }
+      &:nth-child(4){
+        height: 49%;
+      }
+      &:nth-child(5){
+        height: 49%;
+      }
+    }
+  }
+  //移动端视频详情页
+  .video-header{
+    padding-top: 10px;
+    #ft-size(large);
+  }
+}

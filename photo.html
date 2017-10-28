@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>中国海外婚礼策划公司 │ 高端婚礼定制 │ 婚庆布置设计 │ 国外婚礼服务 │ 婚纱摄影 │海外婚礼第一品牌 │成都海外婚礼 │全美式海外婚礼统筹│西式婚礼│户外婚礼│森系婚礼│教堂婚礼（欧洲婚礼、日本婚礼、法国婚礼、关岛婚礼、夏威夷婚礼、巴厘岛婚礼、普吉岛婚礼  环球旅拍）明星婚礼 吴奇隆 刘诗诗 林心如 霍建华www.itlwedding.com中国海外婚礼策划公司 │ 高端婚礼定制 │ 婚庆布置设计 │ 国外婚礼服务 │ 婚纱摄影 │海外婚礼第一品牌 │成都海外婚礼 │全美式海外婚礼统筹│西式婚礼│户外婚礼│森系婚礼│教堂婚礼（欧洲婚礼、日本婚礼、法国婚礼、关岛婚礼、夏威夷婚礼、巴厘岛婚礼、普吉岛婚礼  环球旅拍）明星婚礼 吴奇隆 刘诗诗 林心如 霍建华www.itlwedding.com</title>
     <meta name="keywords" content="中国海外婚礼策划公司 │ 高端婚礼定制 │ 婚庆布置设计 │ 国外婚礼服务 │ 婚纱摄影 │海外婚礼第一品牌 │成都海外婚礼 │全美式海外婚礼统筹│西式婚礼│户外婚礼│森系婚礼│教堂婚礼（欧洲婚礼、日本婚礼、法国婚礼、关岛婚礼、夏威夷婚礼、巴厘岛婚礼、普吉岛婚礼  环球旅拍）明星婚礼 吴奇隆 刘诗诗 林心如 霍建华www.itlwedding.com">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/less.min.js"></script>
+    <script src="js/hammer.min.js"></script>
     <script src="js/overlay.js"></script>
     <script src="js/scroll.js"></script>
 </head>
@@ -75,6 +78,23 @@
     <!-- Page Content -->
     <section id="page-content-wrapper">
         <div class="container">
+            <!-- nav header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <a class="navbar-brand" href="#"></a>
+                </button>
+            </div>
+            <!-- nav bar -->
+            <nav class="st-nav-bar nav-menu collapse navbar-collapse full-padding" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav-pills nav-justified">
+                    <li role="presentation" class="st-bar active"><a href="/">首页</a></li>
+                    <li role="presentation" class="st-bar"><a href="wedding.html">海外婚礼</a></li>
+                    <li role="presentation" class="st-bar"><a href="photo.html">环球旅拍</a></li>
+                    <li role="presentation" class="st-bar"><a href="enjoy.html">客片欣赏</a></li>
+                    <li role="presentation" class="st-bar"><a href="video.html">婚礼视频</a></li>
+                </ul>
+            </nav>
             <!-- scroll content -->
             <!-- 头部 -->
             <header class="scroll-header">
@@ -85,7 +105,7 @@
                     拍摄地点自选加上自己的想法！给想要有自我风格的你们一个不同的回忆~</h4>
             </header>
             <!-- 内容 -->
-            <article class="scroll-content">
+            <article class="scroll-content" id="scroll-content">
                 <div class="item-group">
                     <div class="content-item">
                         <div class="item-box">
@@ -134,8 +154,8 @@
                     </div>
                 </div>
             </article>
-            <div class="scroll-bar">
-                <div class="scroll-slider"></div>
+            <div class="scroll-bar" id="scroll-bar">
+                <div class="scroll-slider" id="scroll-slider"></div>
             </div>
         </div>
     </section>
@@ -148,6 +168,10 @@
         itemCount: '5', //内容总数
         itemWidth: '400' //内容宽度
     });
+    var item = document.getElementById('scroll-content');
+    var bar = document.getElementById('scroll-bar');
+    var slider = document.getElementById('scroll-slider');
+    touchMove(item, 5, bar, slider);
 </script>
 </body>
 </html>

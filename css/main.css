@@ -129,7 +129,6 @@ a {
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
   background-color: transparent;
-  color: #8a6cb6;
   text-decoration: none;
 }
 .sidebar-nav li a:hover {
@@ -140,10 +139,6 @@ a {
 .sidebar-nav li:nth-child(10) {
   padding: 0 15px;
   margin: 15px 0;
-}
-.sidebar-nav li:nth-child(10) a:hover,
-.sidebar-nav li:nth-child(10).open a:hover {
-  color: #8a6cb6;
 }
 .sidebar-nav li:nth-child(11) {
   padding: 0 30px;
@@ -203,6 +198,7 @@ a {
   opacity: 0;
   text-align: center;
   width: 100px;
+  color: #ddd;
 }
 .hamburger.is-closed:hover:before {
   -webkit-transform: translate3d(-100px, 0, 0);

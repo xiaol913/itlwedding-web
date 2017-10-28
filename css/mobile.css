@@ -1,0 +1,121 @@
+@media screen and (max-width: 768px) {
+  #page-content-wrapper {
+    margin: 0 10px;
+  }
+  .sidebar-nav .sidebar-brand {
+    display: none;
+  }
+  .navbar-header {
+    height: 60px;
+  }
+  .navbar-header .navbar-toggle {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .navbar-header .navbar-toggle .navbar-brand {
+    background-image: url("../imgs/logo-right.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+  }
+  .container > .navbar-collapse {
+    margin: 0;
+  }
+  .nav-menu {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 201px;
+    overflow: hidden;
+    z-index: 99;
+    background-color: #fff;
+  }
+  .fade {
+    padding: 0;
+    top: 40%;
+  }
+  .fade .carousel-inner {
+    overflow: inherit;
+  }
+  .fade .carousel-inner .item .carousel-caption .banner_label {
+    height: 100%;
+  }
+  .fade .carousel-inner .item .carousel-caption .banner_label h1 {
+    width: 100%;
+    top: -110px;
+    font-size: 32px;
+    color: #ddd;
+    position: absolute;
+    text-shadow: 1px 1px;
+  }
+  .fade .carousel-inner .item .carousel-caption .banner_label p {
+    margin: 0;
+    width: 100%;
+    color: #ddd;
+    top: 180px;
+    position: relative;
+    text-align: center;
+    text-shadow: 1px 1px;
+  }
+  .scroll-header {
+    padding-top: 0;
+  }
+  .scroll-header label {
+    font-size: 12px;
+    color: #ddd;
+  }
+  .scroll-header h1 {
+    font-size: 32px;
+    color: #575757;
+  }
+  .scroll-header h4 {
+    font-size: 14px;
+  }
+  .scroll-content .item-group .content-item {
+    width: 200px;
+  }
+  .scroll-content .item-group .content-item h3 {
+    font-size: 16px;
+  }
+  .scroll-content .item-group .content-item p {
+    font-size: 12px;
+  }
+  .wed-item {
+    padding-top: 0;
+  }
+  .wed-item .item-content {
+    height: 100%;
+  }
+  .wed-item .item-content h1 {
+    font-size: 14px;
+  }
+  .wed-item .item-content label {
+    font-size: 12px;
+  }
+  .wed-item .item-content p {
+    font-size: 10px;
+  }
+  .wed-item .item-img img {
+    height: 50%;
+    position: relative;
+    top: 20%;
+  }
+  .wed-item .item-img:nth-child(2) {
+    height: 49%;
+  }
+  .wed-item .item-img:nth-child(3) {
+    height: 49%;
+  }
+  .wed-item .item-img:nth-child(4) {
+    height: 49%;
+  }
+  .wed-item .item-img:nth-child(5) {
+    height: 49%;
+  }
+  .video-header {
+    padding-top: 10px;
+    font-size: 16px;
+  }
+}

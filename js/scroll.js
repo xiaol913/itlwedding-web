@@ -133,3 +133,42 @@
     });
     win.CusScrollBar = CusScrollBar;
 })(window, document, jQuery);
+
+// 判断是否为Nan
+var getCss = function(o,key){
+    return o.currentStyle? o.currentStyle[key] : document.defaultView.getComputedStyle(o,false)[key];
+};
+
+/**
+ * touch事件元素移动
+ * @param element 内容ID
+ * @param count 内容块数量
+ * @param bar 滑动条ID
+ * @param slider 滑块ID
+ */
+function touchMove(element, count, bar, slider) {
+    var hammer = new Hammer(element);
+    var x = 0;
+    // 判断可滑动距离
+    var width = Math.max(count * 400, parseInt(getCss(element, 'width'))) - parseInt(getCss(element, 'width'));
+    var maxSliderPosition = parseInt(getCss(bar,"width")) - parseInt(getCss(slider,"width"));
+    element.style.left = getCss(element,"left");
+    hammer.on('panstart', function (e) {
+        if(e.pointerType == 'touch'){
+            // 获取当前left值
+            x = parseInt(element.style.left);
+        }
+    });
+    hammer.on('panmove', function (e) {
+        if(e.pointerType == "touch"){
+            var left = x + e.deltaX;
+            if(left > - width && left < 0){
+                element.style.left = left + 'px';
+                slider.style.left = Math.max(-maxSliderPosition, -maxSliderPosition*parseInt(element.style.left)/width) + 'px';
+            }
+        }
+    });
+    hammer.on('panend', function () {
+
+    });
+}
