@@ -20,6 +20,36 @@
     background-size: contain;
     background-position-x: center;
   }
+  .navbar-header #talk {
+    width: 52px;
+    height: 30px;
+    position: absolute;
+    background-color: #ddd;
+    top: 15px;
+    left: 300px;
+    border-radius: 10px;
+    -webkit-animation: click_me 1s linear 5 2s;
+    -o-animation: click_me 1s linear 5 2s;
+    animation: click_me 1s linear 5 2s;
+  }
+  .navbar-header #talk #inner {
+    margin-left: -9px;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    top: 5px;
+    position: relative;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ddd;
+  }
+  .navbar-header #talk P {
+    padding: 10px 0 0 10px;
+    position: relative;
+    color: #fff;
+    top: -26px;
+    left: 0;
+  }
   .container > .navbar-collapse {
     margin: 0;
   }

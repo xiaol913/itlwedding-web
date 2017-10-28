@@ -247,3 +247,10 @@
     animation: load_word_small_big 1.5s ease-in-out forwards .5s;
   }
 }
+#other-anim(@name){
+  & when (@name=click_me){
+    -webkit-animation: click_me 1s linear 5 2s;
+    -o-animation: click_me 1s linear 5 2s;
+    animation: click_me 1s linear 5 2s;
+  }
+}

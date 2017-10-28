@@ -27,6 +27,34 @@
         background-position-x: center;
       }
     }
+    #talk{
+      width:52px;
+      height:30px;
+      position: absolute;
+      #bg-color(ddd);
+      top: 15px;
+      left: 300px;
+      border-radius:10px;
+      #other-anim(click_me);
+      #inner{
+        margin-left: -9px;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        top: 5px;
+        position: relative;
+        border-top:10px solid transparent;
+        border-bottom:10px solid transparent;
+        border-right:10px solid #ddd;
+      }
+      P{
+        padding: 10px 0 0 10px;
+        position: relative;
+        color: #fff;
+        top: -26px;
+        left: 0;
+      }
+    }
   }
   //移动端下拉菜单栏
   .container>.navbar-collapse{
