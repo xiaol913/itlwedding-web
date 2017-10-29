@@ -85,6 +85,9 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <a class="navbar-brand" href="#"></a>
+                    <span id="talk" class="talk">
+                        点我
+                    </span>
                 </button>
             </div>
             <!-- nav bar -->
@@ -138,13 +141,23 @@
     </section>
 </div>
 <script>
+    var items = document.getElementsByClassName('content-item');
+    var itemWidth = 0;
+    if(items.length > 0){
+        itemWidth = items.item(0).clientWidth;
+    }
+    $('.item-box').css({'width':itemWidth + 'px'});
     new CusScrollBar({
         contSelector: '.scroll-content', //滚动内容区选择器
         barSelector: '.scroll-bar', //滚动条选择器
         sliderSelector: '.scroll-slider', //滚动滑块选择器
         itemCount: '5', //内容总数
-        itemWidth: '400' //内容宽度
+        itemWidth: itemWidth+4 //内容宽度
     });
+    var item = document.getElementById('scroll-content');
+    var bar = document.getElementById('scroll-bar');
+    var slider = document.getElementById('scroll-slider');
+    touchMove(item, 5, bar, slider, itemWidth+4);
 </script>
 </body>
 </html>

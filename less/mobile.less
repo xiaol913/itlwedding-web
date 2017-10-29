@@ -35,28 +35,15 @@
       top: 15px;
       left: 300px;
       border-radius:10px;
+      line-height: 30px;
+      #ft-color(white);
       #other-anim(click_me);
-      #inner{
-        margin-left: -9px;
-        z-index: -1;
-        width: 0;
-        height: 0;
-        top: 5px;
-        position: relative;
-        border-top:10px solid transparent;
-        border-bottom:10px solid transparent;
-        border-right:10px solid #ddd;
-      }
-      P{
-        padding: 10px 0 0 10px;
-        position: relative;
-        color: #fff;
-        top: -26px;
-        left: 0;
-      }
     }
   }
   //移动端下拉菜单栏
+  .st-nav-bar{
+    height: auto;
+  }
   .container>.navbar-collapse{
     margin: 0;
   }
@@ -64,7 +51,6 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    height: 201px;
     overflow: hidden;
     z-index: 99;
     #bg-color(white);
@@ -81,8 +67,8 @@
             height:100%;
             h1{
               width: 100%;
-              top: -110px;
-              #ft-size(title);
+              top: -70px;
+              #ft-size(big);
               #ft-color(ddd);
               position: absolute;
               text-shadow: 1px 1px;

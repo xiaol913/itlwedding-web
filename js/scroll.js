@@ -145,12 +145,13 @@ var getCss = function(o,key){
  * @param count 内容块数量
  * @param bar 滑动条ID
  * @param slider 滑块ID
+ * @param width content-item 的宽度
  */
-function touchMove(element, count, bar, slider) {
+function touchMove(element, count, bar, slider, width) {
     var hammer = new Hammer(element);
     var x = 0;
     // 判断可滑动距离
-    var width = Math.max(count * 400, parseInt(getCss(element, 'width'))) - parseInt(getCss(element, 'width'));
+    var width = Math.max(count * width, parseInt(getCss(element, 'width'))) - parseInt(getCss(element, 'width'));
     var maxSliderPosition = parseInt(getCss(bar,"width")) - parseInt(getCss(slider,"width"));
     element.style.left = getCss(element,"left");
     hammer.on('panstart', function (e) {
@@ -167,8 +168,5 @@ function touchMove(element, count, bar, slider) {
                 slider.style.left = Math.max(-maxSliderPosition, -maxSliderPosition*parseInt(element.style.left)/width) + 'px';
             }
         }
-    });
-    hammer.on('panend', function () {
-
     });
 }

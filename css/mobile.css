@@ -28,27 +28,14 @@
     top: 15px;
     left: 300px;
     border-radius: 10px;
+    line-height: 30px;
+    color: #fbfbfb;
     -webkit-animation: click_me 1s linear 5 2s;
     -o-animation: click_me 1s linear 5 2s;
     animation: click_me 1s linear 5 2s;
   }
-  .navbar-header #talk #inner {
-    margin-left: -9px;
-    z-index: -1;
-    width: 0;
-    height: 0;
-    top: 5px;
-    position: relative;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #ddd;
-  }
-  .navbar-header #talk P {
-    padding: 10px 0 0 10px;
-    position: relative;
-    color: #fff;
-    top: -26px;
-    left: 0;
+  .st-nav-bar {
+    height: auto;
   }
   .container > .navbar-collapse {
     margin: 0;
@@ -57,7 +44,6 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    height: 201px;
     overflow: hidden;
     z-index: 99;
     background-color: #fff;
@@ -74,8 +60,8 @@
   }
   .fade .carousel-inner .item .carousel-caption .banner_label h1 {
     width: 100%;
-    top: -110px;
-    font-size: 32px;
+    top: -70px;
+    font-size: 22px;
     color: #ddd;
     position: absolute;
     text-shadow: 1px 1px;
